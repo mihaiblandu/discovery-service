@@ -45,8 +45,8 @@ pipeline {
       steps {
 
         sh 'echo "Some crap goes here"'
-        //sh 'docker stop discovery-service'
-        //sh 'docker rm discovery-service'
+        sh 'docker stop discovery-service'
+        sh 'docker rm discovery-service'
       }
     }
 
