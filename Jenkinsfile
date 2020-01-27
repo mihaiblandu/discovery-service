@@ -31,7 +31,7 @@ pipeline {
           steps {
             sh 'docker ps -a'
             sh 'docker build -t spring-boot-docker .'
-            sh 'docker run -p  8761:8761 --name discovery-service -t -d discovery-service'
+            sh 'docker run -p  8761:8761 --name discovery-service -t discovery-service'
           }
         }
 
@@ -40,8 +40,10 @@ pipeline {
 
     stage('Final Step') {
       steps {
-        sh 'docker stop discovery-service'
-        sh 'docker rm discovery-service'
+
+        sh 'echo "Some crap goes here"'
+        //sh 'docker stop discovery-service'
+        //sh 'docker rm discovery-service'
       }
     }
 
