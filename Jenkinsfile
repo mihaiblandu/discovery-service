@@ -12,6 +12,7 @@ pipeline {
 
     stage('Build') {
       steps {
+        sh 'ls -la'
         sh './gradlew build'
         archiveArtifacts(artifacts: '**/build/libs/*.jar', fingerprint: true)
       }
