@@ -2,13 +2,12 @@ pipeline {
   agent any
   stages {
     stage('System') {
-
-          steps {
-            sh 'pwd'
-            sh 'echo $HOME;'
-            sh 'docker --version;'
-            sh 'java -version'
-          }
+      steps {
+        sh 'pwd'
+        sh 'echo $HOME;'
+        sh 'docker --version;'
+        sh 'java -version'
+      }
     }
 
     stage('Build') {
