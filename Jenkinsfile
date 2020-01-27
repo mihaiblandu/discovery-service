@@ -31,13 +31,10 @@ pipeline {
         stage('Docker') {
           steps {
             sh 'docker ps -a'
-<<<<<<< HEAD
             sh 'docker build -t spring-boot-docker .'
             sh 'docker run -p  8761:8761 --name discovery-service -t discovery-service'
-=======
             sh 'docker build -t discovery-service .'
             sh 'docker run -p  8761:8761 --name discovery-service -t -d discovery-service'
->>>>>>> c3a95e74d073114254dbd1c7ffeb28acd05ad4f5
           }
         }
 
